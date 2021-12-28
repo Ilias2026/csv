@@ -1,13 +1,11 @@
 {
-  "name": "csv0x",
+  "name": "@docktools/csv",
   "version": "1.0.0",
-  "description": "",
+  "description": "this project is dedicated to simplify csv parsing for developers.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "directories": {
-    "lib": "./lib",
-    "src": "./src",
-    "test": "./src"
+    "lib": "lib"
   },
   "dependencies": {},
   "devDependencies": {

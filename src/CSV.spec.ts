@@ -1,20 +1,20 @@
 import CSV from '.'
-import readline from 'readline'
+import path from 'path'
 import fs from 'fs'
 
 it('Read from file', async function () {
     const csv = new CSV({
-        readStream: fs.createReadStream('./files/test.csv')
+        readStream: fs.createReadStream(path.resolve('./files/crawlo_pt.csv'))
     });
     // console.log(await csv.getLines())
-    const data = await csv.read(['name', 'url', 'price', 'date', 'extra'], {
+    const data = await csv.read(['ean', 'brand', 'sku', 'stock'], {
         excludeEmpty: true,
         ticks: true,
         /* types: {
             price: 'number',
             date: 'date'
         }, */
-        detectType: true,
+        // detectType: true,
         getters: ['value', 'pos'],
     });
     while (true) {
@@ -22,6 +22,7 @@ it('Read from file', async function () {
         if (tick.done) break
         const { value: info, pos } = tick.value
         console.log(tick.value)
+        break
     }
 })
 

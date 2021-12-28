@@ -10,10 +10,8 @@ this project is written in typescript and you can compile the code into javascri
 
 for developement use `ts-node src` instead.
 
-we need to import CSV class first:
 
 ```
-const CSV = require('csv0x')
 const csv = new CSV('./files/test.csv', {
     // separator of csv columns, default: ;
     sep: ';'
