@@ -4,10 +4,10 @@ import fs from 'fs'
 
 it('Read from file', async function () {
     const csv = new CSV({
-        readStream: fs.createReadStream(path.resolve('./files/crawlo_pt.csv'))
+        readStream: fs.createReadStream(path.resolve('./files/test.csv'))
     });
     // console.log(await csv.getLines())
-    const data = await csv.read(['ean', 'brand', 'sku', 'stock'], {
+    const data = await csv.read(['name', 'url', 'price', 'date'], {
         excludeEmpty: true,
         ticks: true,
         /* types: {

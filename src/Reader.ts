@@ -3,13 +3,13 @@ import utils from './utils'
 import CSV from ".";
 import dataGetters from './dataGetters';
 import { setRawDataTypes } from "./utils/types/detectRawDataType";
-import { ICSVDataPair, ICSVDataSource } from "./types";
-import { createInterfaceFromStream } from "./utils/createInterface";
-import { ReadStream } from "fs";
+import { ICSVDataSource } from "./types";
 
 export interface ReadOptions {
     excludeEmpty?: boolean;
-    types?: any;
+    types?: {
+        [name: string]: "number" | "date" | "json"
+    };
     ticks?: boolean;
     getters?: any;
     detectType?: boolean;

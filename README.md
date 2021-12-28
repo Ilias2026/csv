@@ -71,7 +71,7 @@ while (true) {
 #### data parsing
 you can parse data automatically by specifying types of columns using csv headers
 
-for now we can parse `number, date` more will be added in the future, an auto type detector can be possibly integrated in the future using machine learning for data labeling.
+for now we can parse `number, date, json` more will be added in the future, an auto type detector can be possibly integrated in the future using machine learning for data labeling.
 
 ```
 const data = await csv.read(['name', 'url', 'price', 'date', 'extra'], {
